@@ -1,0 +1,46 @@
+{
+  "name": "tfjs-examples-snake-dqn",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "license": "Apache-2.0",
+  "private": true,
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^1.1.2",
+    "babel-runtime": "^6.26.0"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production parcel build index.html  --no-minify --public-url ./",
+    "link-local": "yalc link",
+    "train": "babel-node train.js",
+    "watch": "mkdir -p dist && cp -r models/dqn dist/dqn && cross-env NODE_ENV=development parcel index.html --no-hmr --open"
+  },
+  "devDependencies": {
+    "@types/node": "~10.3.4",
+    "@types/shelljs": "~0.8.0",
+    "fs": "~0.0.1-security",
+    "ts-node": "~5.0.0",
+    "tslint": "~5.13.0",
+    "tslint-no-circular-imports": "~0.6.1",
+    "typescript": "3.3.3333",
+    "@tensorflow/tfjs-node": "^1.0.3",
+    "argparse": "^1.0.10",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "~1.7.0",
+    "clang-format": "~1.2.2",
+    "core-js": "^3.0.1",
+    "cross-env": "^5.1.6",
+    "jasmine": "^3.2.0",
+    "jasmine-core": "^3.2.1",
+    "parcel-bundler": "^1.12.3",
+    "shelljs": "^0.8.3",
+    "tmp": "^0.0.33",
+    "yalc": "~1.0.0-pre.21"
+  }
+}
